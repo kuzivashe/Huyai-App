@@ -1,0 +1,165 @@
+{% extends 'blog/base.html' %}
+{% load embed_video_tags %}
+{% load static %}
+
+
+{% block content %}
+	<style>
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 2px black, 0 0 10px white, 0 0 50px green;
+}
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row1 {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column1 {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+</style>
+	<div><h1>Services</h1></div>
+	<div class="row">
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<!--<div class="bottom-left">Bottom Left</div>
+  				<div class="top-left">Top Left</div>
+  				<div class="top-right">Top Right</div>
+  				<div class="bottom-right">Bottom Right</div>-->
+  				<div class="centered">Accommodation By Locals</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Book A Hotel Room</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Nearby Restaurants</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Upcoming Events</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Tourist Hotspots</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Certify your driver's license</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Nearest Public services</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Unique Experience with Locals</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+  				<img src="{% static '/huyaipic.jpg' %}" alt="Snow" style="max-width:100%;">
+  				<div class="centered">Play to Win a Souvenir Gift</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>HD Gallery</h1>
+</div>
+
+<!-- Photo Grid -->
+<div class="row1">
+  <div class="column1">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic2.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic3.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic2.jpg' %}" style="width:100%">
+  </div>
+  <div class="column1">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic2.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic3.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+  </div>
+  <div class="column1">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic2.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic3.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic2.jpg' %}" style="width:100%">
+  </div>
+  <div class="column1">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic2.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic3.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic.jpg' %}" style="width:100%">
+    <img src="{% static '/huyaipic1.jpg' %}" style="width:100%">
+  </div>
+</div>
+
+
+{% endblock content %}
+

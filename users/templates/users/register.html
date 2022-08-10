@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="content-section">
+		<form method="POST">
+			<!--for security purposes-->
+			{% csrf_token %}
+			<!--bootstrap class used-->
+			<fieldset class="form-group">
+				<!--bootstrap class used with a margin bottom of 4-->
+				<legend class="border-bottom mb-4"> Join Today </legend>
+				{{ form|crispy }}
+			</fieldset>
+			<!--bootstrap class used-->
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit"> Sign Up </button>
+			</div>
+		</form>
+		<!--class used has a padding top of 3 an ml-2 refers to margin left of 2-->
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+			</small>
+		</div>
+	</div>
+{% endblock content %}

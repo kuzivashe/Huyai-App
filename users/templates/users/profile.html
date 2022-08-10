@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="content-section">
+  		<div class="media">
+    		<img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+    		<div class="media-body">
+      			<h2 class="account-heading">{{ user.username }}</h2>
+      			<p class="text-secondary">{{ user.email }}</p>
+    		</div>
+  		</div>
+  		<!--enctype is there to help your images pass properly in the background-->
+  		<form method="POST" enctype="mulitpart/form-data">
+			<!--for security purposes-->
+			{% csrf_token %}
+			<!--bootstrap class used-->
+			<fieldset class="form-group">
+				<!--bootstrap class used with a margin bottom of 4-->
+				<legend class="border-bottom mb-4"> Profile info </legend>
+				{{ u_form|crispy }}
+				{{ p_form|crispy }}
+			</fieldset>
+			<!--bootstrap class used-->
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit"> Update </button>
+			</div>
+		</form>
+	</div>
+{% endblock content %}
